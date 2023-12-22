@@ -1,25 +1,36 @@
-User Management:
-Create User: POST /api/users
-Get All Users: GET /api/users
-Get User by ID: GET /api/users/:id
-Update User: PUT /api/users/:id
-Delete User: DELETE /api/users/:id
-Login: POST /api/login
-Passenger Management:
-Create Passenger Profile: POST /api/passengers
-Get Passenger Profile: GET /api/passengers/:id
-Update Passenger Profile: PUT /api/passengers/:id
-Delete Passenger Profile: DELETE /api/passengers/:id
-Reservation and Ticketing:
-Search Flights: GET /api/flights
-Get Available Seats for a Flight: GET /api/flights/:id/seats
-Make Reservation: POST /api/reservations
-Issue Ticket: POST /api/tickets
-Handle Refunds: PUT /api/tickets/:id/refund
-Manage Bookings: PUT /api/bookings/:id
-Flight Management:
-Create Flight: POST /api/flights
-Get All Flights: GET /api/flights
-Get Flight by ID: GET /api/flights/:id
-Update Flight: PUT /api/flights/:id
-Delete Flight: DELETE /api/flights/:id
+{
+    "name": "John Doe",
+    "email": "john@example.com",
+    "password": "hashedPassword",
+    "role": "Admin",
+    "permissions": ["permission1", "permission2"]
+  }
+  
+
+
+  Get All Users:
+Endpoint: GET /api/users
+Description: Retrieves a list of all users in the system.
+Response: Status 200 with an array of user objects.
+Get User by ID:
+Endpoint: GET /api/users/:id
+Description: Retrieves a specific user by their ID.
+Response: Status 200 with the user object corresponding to the ID.
+Update User:
+Endpoint: PUT /api/users/:id
+Description: Updates a specific user's information.
+Request Body: Same as the 'Create User' endpoint.
+Response: Status 200 with the updated user object.
+Delete User:
+Endpoint: DELETE /api/users/:id
+Description: Deletes a specific user from the system.
+Response: Status 204 (No Content) on successful deletion.
+Login:
+Endpoint: POST /api/login
+Description: Authenticates users based on credentials.
+Request Body:
+{
+    "email": "john@example.com",
+    "password": "hashedPassword"
+  }
+  
